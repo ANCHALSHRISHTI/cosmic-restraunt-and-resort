@@ -1,26 +1,43 @@
-/* General Styling */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
     padding: 0;
-    background-color: #fdf8e1; /* Elegant Cream Background */
-    color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Menu Section */
 #menu {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff8e7;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    background-color: #fff;
 }
 
 #menu h2 {
-    font-size: 32px;
-    color: #004d40; /* Deep Teal */
+    font-size: 28px;
+    color: #00796b;
     margin-bottom: 20px;
-    text-transform: uppercase;
 }
 
 /* Menu Grid Layout */
@@ -34,38 +51,34 @@ body {
 
 /* Individual Menu Card */
 .menu-category {
-    background-color: #fff;
+    background-color: #f8f8f8;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
     text-align: left;
-    border-left: 5px solid #8b0000; /* Elegant Burgundy Border */
 }
 
 .menu-category:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    border-left-color: #c4a000; /* Gold on Hover */
+    transform: scale(1.03);
 }
 
 .menu-category h3 {
-    font-size: 24px;
-    color: #8b0000; /* Burgundy */
-    margin-bottom: 12px;
+    font-size: 22px;
+    color: #d32f2f;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .menu-category ul {
     list-style: none;
     padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px;
 }
 
 .menu-category ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #ddd;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .menu-category ul li:last-child {
@@ -79,10 +92,40 @@ body {
     }
 
     .menu-category {
-        padding: 18px;
+        padding: 15px;
     }
+}
 
-    #menu h2 {
-        font-size: 28px;
-    }
+/* Popup */
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/* Gallery */
+.gallery img {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background: #222;
+    color: white;
+    padding: 10px;
 }
