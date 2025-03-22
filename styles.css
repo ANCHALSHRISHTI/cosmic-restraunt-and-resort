@@ -54,3 +54,71 @@ footer {
 .gallery img:hover {
     transform: scale(1.1);
 }
+/* Menu Section */
+#menu {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#menu h2 {
+    font-size: 28px;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+/* Menu Grid Layout */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Menu Card */
+.menu-category {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+.menu-category:hover {
+    transform: scale(1.03);
+}
+
+.menu-category h3 {
+    font-size: 22px;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu-category ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.menu-category ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-category ul li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .menu-category {
+        padding: 15px;
+    }
+}
