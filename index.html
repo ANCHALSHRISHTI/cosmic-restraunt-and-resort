@@ -47,8 +47,9 @@
     
     <!-- Image Section -->
     <section class="image-gallery">
-        <h2>Our Resort in Pictures</h2>
-        <img src="resort view1.jpg" alt="Resort View">
+        <h2>Explore Our Resort</h2>
+        <div class="gallery">
+            <img src="resort view1.jpg" alt="Resort View">
             <img src="resort view2.jpg" alt="Resort View">
             <img src="resort view3.jpg" alt="Resort View">
             <img src="resort view4.jpg" alt="Resort View">
@@ -64,40 +65,81 @@
             <img src="room2.jpg" alt="Luxury Room"> 
             <img src="room3.jpg" alt="Luxury Room">
             <img src="room4.jpg" alt="Luxury Room">
-        
-    </section>
-    
-    <!-- Food Menu -->
-    <section id="food-menu">
-        <h2>Our Menu</h2>
-        <button onclick="showMenu()">View Menu</button>
-        <div id="menuDetails" class="hidden">
-            <h3>North Indian Cuisine</h3>
-            <p>Butter Chicken – Creamy tomato-based chicken curry.</p>
-            <p>Rogan Josh – Slow-cooked aromatic lamb curry.</p>
-            <p>Yakhni Pulao – Fragrant rice cooked in saffron yogurt broth.</p>
-            
-            <h3>South Indian Cuisine</h3>
-            <p>Dosa with Sambar – Crispy fermented crepe with lentil soup.</p>
-            <p>Chettinad Chicken – Spicy & flavorful chicken dish.</p>
-            <p>Hyderabadi Biryani – Fragrant dum-cooked rice with spices.</p>
-            
-            <h3>Eastern Indian Cuisine</h3>
-            <p>Shorshe Ilish – Hilsa fish in mustard gravy.</p>
-            <p>Rosogolla – Soft, spongy cottage cheese dessert.</p>
-            <p>Dalma – Lentils with vegetables and raw papaya.</p>
-            
-            <h3>Western Indian Cuisine</h3>
-            <p>Dal Baati Churma – Wheat dumplings with lentils & sweet crumbles.</p>
-            <p>Laal Maas – Fiery red mutton curry.</p>
-            <p>Misal Pav – Spicy sprouted curry with bread.</p>
         </div>
     </section>
+
+    <section class="customer-details">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="customerName" placeholder="Your Name">
+        <button onclick="showMessage()">Submit</button>
+        <p id="personalMessage"></p>
+    </section>
+
+    <footer>
+        <p>Thank you for visiting Cosmo Bite Restaurant & Resort!</p>
+    </footer>
     
-    <!-- Payment Options -->
-    <section id="payment-options">
-        <h2>Payment Options</h2>
-        <p>We accept online and offline payments.</p>
+    <!-- Food Menu -->
+    <header><h1>Our Menu</h1></header>
+    <section>
+        <p>A delightful journey through the diverse cuisines of India, bringing you authentic flavors from North, South, East, and West!</p>
+        
+        <h2>🥶 North Indian Cuisine (Rich, Spicy & Hearty)</h2>
+        <h3>Punjab</h3>
+        <p><strong>Butter Chicken:</strong> Creamy tomato-based chicken curry. (High in protein & rich in flavors)</p>
+        
+        <h3>Kashmir</h3>
+        <p><strong>Rogan Josh:</strong> Slow-cooked aromatic lamb curry. (Packed with proteins & warming spices)</p>
+        <p><strong>Yakhni Pulao:</strong> Fragrant rice cooked in saffron yogurt broth. (Easy digestion & rich in flavor)</p>
+        
+        <h3>Uttar Pradesh</h3>
+        <p><strong>Tunday Kabab:</strong> Melt-in-mouth mutton kebabs. (Protein-packed & aromatic spices)</p>
+        <p><strong>Baati Chokha:</strong> Roasted wheat balls with mashed potatoes & eggplant. (Rich in fiber & minerals)</p>
+        
+        <h2>🌴 South Indian Cuisine (Light, Flavorful & Nutrient-Rich)</h2>
+        <h3>Tamil Nadu</h3>
+        <p><strong>Dosa with Sambar:</strong> Crispy fermented crepe with lentil soup. (Probiotic-rich & great for digestion)</p>
+        <p><strong>Chettinad Chicken:</strong> Spicy & flavorful chicken dish. (Boosts metabolism & immunity)</p>
+        
+        <h3>Kerala</h3>
+        <p><strong>Kerala Fish Curry:</strong> Tangy coconut-based fish curry. (High in Omega-3 for heart health)</p>
+        <p><strong>Appam & Stew:</strong> Soft rice pancakes with coconut stew. (Rich in fiber & gut-friendly)</p>
+        
+        <h3>Andhra Pradesh</h3>
+        <p><strong>Hyderabadi Biryani:</strong> Fragrant dum-cooked rice with spices. (High in protein & aromatic flavors)</p>
+        <p><strong>Gongura Pachadi:</strong> Tangy sorrel leaf chutney. (Rich in iron & antioxidants)</p>
+        
+        <h2>🐅 Eastern Indian Cuisine (Simple, Nutritious & Flavorful)</h2>
+        <h3>West Bengal</h3>
+        <p><strong>Shorshe Ilish:</strong> Hilsa fish in mustard gravy. (High in Omega-3 & good for the heart)</p>
+        <p><strong>Rosogolla:</strong> Soft, spongy cottage cheese dessert. (Light & delicious for digestion)</p>
+        
+        <h3>Odisha</h3>
+        <p><strong>Dalma:</strong> Lentils with vegetables and raw papaya. (Packed with proteins & fiber)</p>
+        <p><strong>Chhena Poda:</strong> Burnt cheesecake made from cottage cheese. (Calcium-rich & nutritious dessert)</p>
+        
+        <h3>Assam</h3>
+        <p><strong>Assamese Thali:</strong> Rice, fish, green leafy vegetables, and dal. (Balanced nutrition & healthy eating)</p>
+        <p><strong>Masor Tenga:</strong> Tangy fish curry with tomatoes & lemon. (Good for digestion & refreshing taste)</p>
+        
+        <h2>🌄 Western Indian Cuisine (Spicy, Sweet & Wholesome)</h2>
+        <h3>Rajasthan</h3>
+        <p><strong>Dal Baati Churma:</strong> Wheat dumplings with lentils & sweet crumbles. (Rich in fiber & energy-boosting)</p>
+        <p><strong>Laal Maas:</strong> Fiery red mutton curry. (Great for metabolism & winter warming)</p>
+        
+        <h3>Gujarat</h3>
+        <p><strong>Dhokla:</strong> Steamed gram flour cake. (Probiotic-rich & light on the stomach)</p>
+        <p><strong>Undhiyu:</strong> Mixed vegetable curry with winter greens. (Packed with vitamins & minerals)</p>
+        
+        <h3>Maharashtra</h3>
+        <p><strong>Puran Poli:</strong> Sweet lentil-stuffed flatbread. (High in proteins & energy)</p>
+        <p><strong>Misal Pav:</strong> Spicy sprouted curry with bread. (Rich in fiber & protein-packed)</p>
+        
+        <h3>Goa</h3>
+        <p><strong>Pork Vindaloo:</strong> Fiery, vinegar-based pork curry. (High in protein & bold flavors)</p>
+        <p><strong>Bebinca:</strong> Layered coconut milk dessert. (Great for digestion & rich taste)</p>
+        
+        <p>🎉 Experience India on a plate – Taste, Health & Heritage in every bite! 🍽️✨</p>
     </section>
     
     <!-- Farewell Message -->
