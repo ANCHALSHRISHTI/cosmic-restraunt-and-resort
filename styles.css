@@ -1,42 +1,50 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #4B2C20;
+    color: #FFD700;
     margin: 0;
     padding: 0;
+}
+
+h2 {
     text-align: center;
-    background-color: #f8f8f8;
+    color: #FFD700;
 }
 
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
+#food-menu {
     padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
-.hidden { 
-    display: none; 
+.menu-category {
+    cursor: pointer;
+    background-color: #8B4513;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
-.heart { 
-    color: red; 
-    font-size: 24px; 
+.menu-category:hover {
+    background-color: #A0522D;
 }
 
-section {
-    padding: 20px;
-    margin: 10px;
-    background: white;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+.dish-list {
+    display: none;
+    padding-left: 20px;
 }
 
-.image-gallery img {
-    width: 100%;
-    max-width: 500px;
-    margin: 10px 0;
-    border-radius: 8px;
+.dish-item {
+    cursor: pointer;
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.dish-item:hover {
+    text-decoration: underline;
+}
+
+.dish-details {
+    display: none;
+    padding-left: 40px;
+    font-style: italic;
+    color: #FFEC8B;
 }
