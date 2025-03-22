@@ -110,11 +110,18 @@ nav ul li a {
 }
 
 /* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 .gallery img {
-    width: 200px; 
-    height: auto;
+    width: 200px;
+    height: 150px; /* Ensuring uniform height */
+    object-fit: cover; /* Crops the image to fit while maintaining aspect ratio */
     border-radius: 10px;
-    margin: 10px;
     transition: transform 0.3s ease;
 }
 
