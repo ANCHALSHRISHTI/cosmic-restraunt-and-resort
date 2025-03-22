@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Restaurant & Resort</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Welcome Popup -->
+    <div id="welcomePopup" class="popup">
+        <p>Welcome to Cosmic Restaurant & Resort!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    
+    <!-- Customer Details Section -->
+    <section id="customer-section">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="customerName" placeholder="Enter your name">
+        <button onclick="displayMessage()">Submit</button>
+        <p id="customerMessage"></p>
+    </section>
+    
+    <!-- Restaurant Information -->
+    <section id="restaurant-info">
+        <h2>About Us</h2>
+        <p>Welcome to Cosmic Restaurant & Resort, offering luxury stays and fine dining.</p>
+        <h3>Contact Information</h3>
+        <p>Phone: +aaa yyyy xxxx | Email: info@cosmicresort.com</p>
+        <h3>Room Details</h3>
+        <ul>
+            <li>AC Room - $100 per night</li>
+            <li>Non-AC Room - $70 per night</li>
+        </ul>
+    </section>
+    
+    <!-- Resort Facilities -->
+    <section id="facilities">
+        <h2>Our Facilities</h2>
+        <ul>
+            <li>Spa & Massage</li>
+            <li>Swimming Pool</li>
+            <li>Garden</li>
+        </ul>
+    </section>
+    
+    <!-- Image Section -->
+    <section class="image-gallery">
+        <h2>Our Resort in Pictures</h2>
+        <img src="resort1.jpg" alt="Beautiful Resort View">
+        <img src="resort2.jpg" alt="Luxury Rooms">
+        <img src="resort3.jpg" alt="Garden Area">
+        <img src="resort4.jpg" alt="Swimming Pool">
+    </section>
+    
+    <!-- Food Menu -->
+    <section id="food-menu">
+        <h2>Our Menu</h2>
+        <button onclick="showMenu()">View Menu</button>
+        <div id="menuDetails" class="hidden">
+            <h3>North Indian Cuisine</h3>
+            <p>Butter Chicken – Creamy tomato-based chicken curry.</p>
+            <p>Rogan Josh – Slow-cooked aromatic lamb curry.</p>
+            <p>Yakhni Pulao – Fragrant rice cooked in saffron yogurt broth.</p>
+            
+            <h3>South Indian Cuisine</h3>
+            <p>Dosa with Sambar – Crispy fermented crepe with lentil soup.</p>
+            <p>Chettinad Chicken – Spicy & flavorful chicken dish.</p>
+            <p>Hyderabadi Biryani – Fragrant dum-cooked rice with spices.</p>
+            
+            <h3>Eastern Indian Cuisine</h3>
+            <p>Shorshe Ilish – Hilsa fish in mustard gravy.</p>
+            <p>Rosogolla – Soft, spongy cottage cheese dessert.</p>
+            <p>Dalma – Lentils with vegetables and raw papaya.</p>
+            
+            <h3>Western Indian Cuisine</h3>
+            <p>Dal Baati Churma – Wheat dumplings with lentils & sweet crumbles.</p>
+            <p>Laal Maas – Fiery red mutton curry.</p>
+            <p>Misal Pav – Spicy sprouted curry with bread.</p>
+        </div>
+    </section>
+    
+    <!-- Payment Options -->
+    <section id="payment-options">
+        <h2>Payment Options</h2>
+        <p>We accept online and offline payments.</p>
+    </section>
+    
+    <!-- Farewell Message -->
+    <section id="farewell">
+        <h2>Thank You for Visiting!</h2>
+        <p>We hope to see you again soon!</p>
+        <span class="heart">❤️</span>
+    </section>
+</body>
+</html>
