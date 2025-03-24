@@ -17,6 +17,7 @@ function closePopup() {
 // Function to display customer message
 function displayMessage() {
     let name = document.getElementById("customerName").value.trim();
+    let phone = document.getElementById("customerPhone").value.trim();
     let email = document.getElementById("customerEmail").value.trim();
     let aadharFile = document.getElementById("customerAadhar").files.length;
     let messageElement = document.getElementById("customerMessage");
