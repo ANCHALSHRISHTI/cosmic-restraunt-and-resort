@@ -1,71 +1,123 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Show the welcome popup on page load
-    document.getElementById("welcomePopup").style.display = "block";
+    // Welcome Popup Logic
+    const welcomePopup = document.getElementById("welcomePopup");
+    setTimeout(() => {
+        welcomePopup.style.display = "block";
+    }, 1000);
 
-    // Show or hide guest details based on selection
-    document.getElementById("customerWith").addEventListener("change", function () {
-        let additionalDetails = document.getElementById("additionalDetails");
-        additionalDetails.style.display = (this.value === "Family" || this.value === "Friends") ? "block" : "none";
-    });
-});
-
-// Function to close the welcome popup
-function closePopup() {
-    document.getElementById("welcomePopup").style.display = "none";
-}
-
-// Function to display customer message
-function displayMessage() {
-    let name = document.getElementById("customerName").value.trim();
-    let email = document.getElementById("customerEmail").value.trim();
-    let phone = document.getElementById("customerPhone").value.trim();
-    let aadharFile = document.getElementById("customerAadhar").files.length;
-    let messageElement = document.getElementById("customerMessage");
-
-    // Reset message color to default
-    messageElement.style.color = "red";
-
-    // Validate Name
-    if (name === "") {
-        messageElement.textContent = "❌ Please enter your name.";
-        return;
-    }
-
-    // Validate Email
-    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-        messageElement.textContent = "❌ Please enter a valid email address.";
-        return;
-    }
-
-    // Validate Phone Number (10-digit Indian format)
-    let phonePattern = /^[6-9]\d{9}$/;
-    if (!phonePattern.test(phone)) {
-        messageElement.textContent = "❌ Please enter a valid 10-digit phone number.";
-        return;
-    }
-
-    // Validate Aadhar Upload
-    if (aadharFile === 0) {
-        messageElement.textContent = "❌ Please upload your Aadhaar card photo.";
-        return;
-    }
-
-    // Personalized Greeting Based on First Letter of Name
-    let firstLetter = name.charAt(0).toUpperCase();
-    let messages = {
-        'A': "Awesome choice visiting us!", 'B': "Beautiful memories await you!", 'C': "Cosmic experiences await!", 
-        'D': "Delightful service guaranteed!", 'E': "Enjoy your time here!", 'F': "Fantastic stay ahead!",
-        'G': "Great hospitality awaits!", 'H': "Have a wonderful time!", 'I': "Incredible moments await!",
-        'J': "Joyful stay assured!", 'K': "Kind service for you!", 'L': "Luxury at its best!",
-        'M': "Magical experience begins!", 'N': "New adventures await!", 'O': "Outstanding service just for you!",
-        'P': "Perfect destination for you!", 'Q': "Quality hospitality here!", 'R': "Relax and enjoy!",
-        'S': "Spectacular moments await!", 'T': "Terrific stay guaranteed!", 'U': "Unforgettable journey ahead!",
-        'V': "Very warm welcome to you!", 'W': "Wonderful days ahead!", 'X': "eXtraordinary experience begins!",
-        'Y': "Your best vacation starts now!", 'Z': "Zen-like relaxation for you!"
+    window.closePopup = function () {
+        welcomePopup.style.display = "none";
     };
 
-    let personalizedMessage = messages[firstLetter] || "Welcome to Cosmic Resort!";
-    messageElement.textContent = `✅ Hello ${name}, ${personalizedMessage}`;
-    messageElement.style.color = "green";
-}
+    // Customer Greeting Based on Name
+    const messages = {
+        A: "A warm welcome to you!",
+        B: "Best flavors await your taste buds.",
+        C: "Cherish delightful moments with us.",
+        D: "Delicious dishes made with love.",
+        E: "Every bite tells a story.",
+        F: "Fresh ingredients, fantastic flavors!",
+        G: "Great ambiance for great times.",
+        H: "Happiness served on a plate.",
+        I: "Indulge in mouthwatering cuisines.",
+        J: "Just relax and enjoy your meal.",
+        K: "Keep smiling with every bite.",
+        L: "Love and taste blend perfectly here.",
+        M: "Memories are made around the table.",
+        N: "Nourishing meals, heartwarming service.",
+        O: "Outstanding hospitality always!",
+        P: "Perfect place for food lovers.",
+        Q: "Quality food, quality time.",
+        R: "Relax and relish your meal.",
+        S: "Savor the taste of perfection.",
+        T: "Taste the magic in every dish.",
+        U: "Unforgettable dining experience.",
+        V: "Variety that satisfies every craving.",
+        W: "Warm hearts, wonderful meals.",
+        X: "Xtra special service for you.",
+        Y: "Your happiness is our priority.",
+        Z: "Zestful flavors, zero regrets!"
+    };
+
+    window.displayMessage = function () {
+        const nameInput = document.getElementById("customerName").value.trim();
+        const messageDisplay = document.getElementById("customerMessage");
+
+        if (nameInput.length > 0) {
+            let firstLetter = nameInput[0].toUpperCase();
+            let message = messages[firstLetter] || "Welcome! Enjoy your meal.";
+            messageDisplay.textContent = message;
+            messageDisplay.style.display = "block";
+        } else {
+            messageDisplay.textContent = "Please enter your name.";
+            messageDisplay.style.display = "block";
+        }
+    };
+
+    // Dynamic Menu Generation
+    const menuData = [
+        {
+            category: "North Indian Cuisine",
+            items: [
+                { region: "Punjab", dishes: ["Butter Chicken", "Amritsari Kulcha"] },
+                { region: "Kashmir", dishes: ["Rogan Josh", "Yakhni Pulao"] },
+                { region: "Uttar Pradesh", dishes: ["Tunday Kabab", "Baati Chokha"] }
+            ]
+        },
+        {
+            category: "South Indian Cuisine",
+            items: [
+                { region: "Tamil Nadu", dishes: ["Dosa with Sambar", "Chettinad Chicken"] },
+                { region: "Kerala", dishes: ["Kerala Fish Curry", "Appam & Stew"] },
+                { region: "Andhra Pradesh", dishes: ["Hyderabadi Biryani", "Gongura Pachadi"] }
+            ]
+        },
+        {
+            category: "Eastern Indian Cuisine",
+            items: [
+                { region: "West Bengal", dishes: ["Shorshe Ilish", "Rosogolla"] },
+                { region: "Odisha", dishes: ["Dalma", "Chhena Poda"] },
+                { region: "Assam", dishes: ["Assamese Thali", "Masor Tenga"] }
+            ]
+        },
+        {
+            category: "Western Indian Cuisine",
+            items: [
+                { region: "Rajasthan", dishes: ["Dal Baati Churma", "Laal Maas"] },
+                { region: "Gujarat", dishes: ["Dhokla", "Undhiyu"] },
+                { region: "Maharashtra", dishes: ["Puran Poli", "Misal Pav"] },
+                { region: "Goa", dishes: ["Pork Vindaloo", "Bebinca"] }
+            ]
+        }
+    ];
+
+    function generateMenu() {
+        const menuList = document.getElementById("menu-list");
+        menuList.innerHTML = "";
+
+        menuData.forEach(category => {
+            let categoryDiv = document.createElement("div");
+            categoryDiv.classList.add("menu-category");
+
+            let categoryTitle = document.createElement("h3");
+            categoryTitle.textContent = category.category;
+            categoryTitle.classList.add("menu-title");
+
+            let itemList = document.createElement("ul");
+            itemList.classList.add("menu-items");
+
+            category.items.forEach(region => {
+                let regionItem = document.createElement("li");
+                regionItem.classList.add("menu-region");
+                regionItem.innerHTML = `<strong>${region.region}</strong>: ${region.dishes.join(", ")}`;
+                itemList.appendChild(regionItem);
+            });
+
+            categoryDiv.appendChild(categoryTitle);
+            categoryDiv.appendChild(itemList);
+            menuList.appendChild(categoryDiv);
+        });
+    }
+
+    generateMenu();
+});
