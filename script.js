@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Show the welcome popup on page load
     document.getElementById("welcomePopup").style.display = "block";
+
+    // Show or hide guest details based on selection
+    document.getElementById("customerWith").addEventListener("change", function () {
+        let additionalDetails = document.getElementById("additionalDetails");
+        if (this.value === "Family" || this.value === "Friends") {
+            additionalDetails.style.display = "block";
+        } else {
+            additionalDetails.style.display = "none";
+        }
+    });
 });
 
 function closePopup() {
@@ -9,13 +19,30 @@ function closePopup() {
 
 function displayMessage() {
     let name = document.getElementById("customerName").value.trim();
+    let email = document.getElementById("customerEmail").value.trim();
+    let aadharFile = document.getElementById("customerAadhar").files.length;
     let messageElement = document.getElementById("customerMessage");
 
+    // Validate Name
     if (name === "") {
-        messageElement.textContent = "Please enter your name.";
+        messageElement.textContent = "❌ Please enter your name.";
         return;
     }
 
+    // Validate Email
+    let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        messageElement.textContent = "❌ Please enter a valid email address.";
+        return;
+    }
+
+    // Validate Aadhar Upload
+    if (aadharFile === 0) {
+        messageElement.textContent = "❌ Please upload your Aadhaar card photo.";
+        return;
+    }
+
+    // Personalized Greeting Based on First Letter of Name
     let firstLetter = name.charAt(0).toUpperCase();
     let messages = {
         'A': "Awesome choice visiting us!", 'B': "Beautiful memories await you!", 'C': "Cosmic experiences await!", 
@@ -30,5 +57,6 @@ function displayMessage() {
     };
 
     let personalizedMessage = messages[firstLetter] || "Welcome to Cosmic Resort!";
-    messageElement.textContent = `Hello ${name}, ${personalizedMessage}`;
+    messageElement.textContent = `✅ Hello ${name}, ${personalizedMessage}`;
+    messageElement.style.color = "green";
 }
