@@ -15,39 +15,44 @@
     </div>
     
      <!-- Customer Details Section -->
-    <section id="customer-section">
-        <h2>Enter Your Details</h2>
+    <!-- Customer Details Section -->
+<section id="customer-section">
+    <h2>Enter Your Details</h2>
+    <div class="form-container">
         <label for="customerName">Name:</label>
         <input type="text" id="customerName" placeholder="Enter your name">
-        
+
         <label for="customerEmail">Email:</label>
         <input type="email" id="customerEmail" placeholder="Enter your email">
-        
-        <label for="customerAadhar">Aadhar Card Photo:</label>
+
+        <label for="customerAadhar">Upload Aadhar Card:</label>
         <input type="file" id="customerAadhar" accept="image/*">
-        
+
         <label for="customerWith">Are you with family or friends?</label>
         <select id="customerWith">
             <option value="Alone">Alone</option>
             <option value="Family">Family</option>
             <option value="Friends">Friends</option>
         </select>
-        
-        <div id="additionalDetails" style="display: none;">
-            <h3>Additional Guest Details</h3>
-            <label for="guestName">Guest Name:</label>
-            <input type="text" id="guestName" placeholder="Enter guest's name">
-            
-            <label for="guestPhone">Guest Phone Number:</label>
-            <input type="tel" id="guestPhone" placeholder="Enter guest's phone number">
-            
-            <label for="guestAadhar">Guest Aadhar Card Photo:</label>
-            <input type="file" id="guestAadhar" accept="image/*">
-        </div>
-        
-        <button onclick="displayMessage()">Submit</button>
-        <p id="customerMessage"></p>
-    </section>
+    </div>
+
+    <!-- Additional Guest Details -->
+    <div id="additionalDetails">
+        <h3>Additional Guest Details</h3>
+        <label for="guestName">Guest Name:</label>
+        <input type="text" id="guestName" placeholder="Enter guest's name">
+
+        <label for="guestPhone">Guest Phone:</label>
+        <input type="tel" id="guestPhone" placeholder="Enter guest's phone">
+
+        <label for="guestAadhar">Upload Guest Aadhar:</label>
+        <input type="file" id="guestAadhar" accept="image/*">
+    </div>
+
+    <button onclick="displayMessage()">Submit</button>
+    <p id="customerMessage"></p>
+</section>
+
 
     <!-- Resort Information Section -->
     <section id="resort-info">
