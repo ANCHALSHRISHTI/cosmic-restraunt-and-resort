@@ -15,39 +15,30 @@
     </div>
     
      <!-- Customer Details Section -->
-    <section id="customer-section">
-        <h2>Enter Your Details</h2>
-        <label for="customerName">Name:</label>
-        <input type="text" id="customerName" placeholder="Enter your name">
-        
-        <label for="customerEmail">Email:</label>
-        <input type="email" id="customerEmail" placeholder="Enter your email">
-        
-        <label for="customerAadhar">Aadhar Card Photo:</label>
-        <input type="file" id="customerAadhar" accept="image/*">
-        
-        <label for="customerWith">Are you with family or friends?</label>
-        <select id="customerWith">
-            <option value="Alone">Alone</option>
-            <option value="Family">Family</option>
-            <option value="Friends">Friends</option>
-        </select>
-        
-        <div id="additionalDetails" style="display: none;">
-            <h3>Additional Guest Details</h3>
-            <label for="guestName">Guest Name:</label>
-            <input type="text" id="guestName" placeholder="Enter guest's name">
-            
-            <label for="guestPhone">Guest Phone Number:</label>
-            <input type="tel" id="guestPhone" placeholder="Enter guest's phone number">
-            
-            <label for="guestAadhar">Guest Aadhar Card Photo:</label>
-            <input type="file" id="guestAadhar" accept="image/*">
-        </div>
-        
-        <button onclick="displayMessage()">Submit</button>
-        <p id="customerMessage"></p>
-    </section>
+    <div id="customer-section">
+    <h2>Enter Your Details</h2>
+    <label for="customerName">Your Name:</label>
+    <input type="text" id="customerName" placeholder="Enter your name" required>
+
+    <label for="customerEmail">Your Email:</label>
+    <input type="email" id="customerEmail" placeholder="Enter your email" required>
+
+    <label for="customerWith">Who are you with?</label>
+    <select id="customerWith">
+        <option value="Alone">Alone</option>
+        <option value="Family">Family</option>
+        <option value="Friends">Friends</option>
+    </select>
+
+    <div id="additionalDetails">
+        <label for="guestCount">Number of Guests:</label>
+        <input type="number" id="guestCount" min="1" placeholder="Enter number of guests">
+    </div>
+
+    <button onclick="displayMessage()">Submit</button>
+    <p id="customerMessage"></p>
+</div>
+
 
     <!-- Resort Information Section -->
     <section id="resort-info">
