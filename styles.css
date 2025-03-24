@@ -17,9 +17,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: none;
     text-align: center;
-    z-index: 10;
+    z-index: 1000;
+    display: none;
 }
 
 .popup button {
@@ -35,19 +35,13 @@ body {
 #customer-section {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 400px;
-    border-radius: 10px;
 }
 
 #customer-section input {
     padding: 8px;
-    width: 80%;
+    width: 250px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 #customer-section button {
@@ -61,32 +55,44 @@ body {
 
 #customerMessage {
     font-weight: bold;
-    color: #00796b;
     margin-top: 10px;
 }
 
-/* Resort Information Section */
+/* Resort Information */
 #resort-info {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Room Details Table */
+#room-details {
     text-align: center;
     padding: 30px;
-    background-color: #fff;
+}
+
+#room-details table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
-#resort-info h2 {
-    color: #d32f2f;
+#room-details th, #room-details td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
-#resort-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#resort-info ul li {
-    padding: 5px 0;
-    font-size: 16px;
+#room-details th {
+    background-color: #00796b;
+    color: white;
 }
 
 /* Image Gallery */
@@ -108,17 +114,15 @@ body {
 }
 
 .gallery img {
-    width: 250px;
-    height: 180px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
 /* Menu Section */
@@ -141,20 +145,6 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.menu-category h3 {
-    color: #d32f2f;
-}
-
-.menu-category ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.menu-category ul li {
-    padding: 5px 0;
-    font-size: 16px;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -171,5 +161,9 @@ footer {
 
     .menu-category {
         max-width: 90%;
+    }
+
+    #room-details table {
+        width: 100%;
     }
 }
