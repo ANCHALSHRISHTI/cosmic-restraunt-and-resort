@@ -5,25 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show or hide guest details based on selection
     document.getElementById("customerWith").addEventListener("change", function () {
         let additionalDetails = document.getElementById("additionalDetails");
-        additionalDetails.style.display = (this.value === "Family" || this.value === "Friends") ? "block" : "none";
+        if (this.value === "Family" || this.value === "Friends") {
+            additionalDetails.style.display = "block";
+        } else {
+            additionalDetails.style.display = "none";
+        }
     });
 });
 
-// Function to close the welcome popup
 function closePopup() {
     document.getElementById("welcomePopup").style.display = "none";
 }
 
-// Function to display customer message
 function displayMessage() {
     let name = document.getElementById("customerName").value.trim();
-    let phone = document.getElementById("customerPhone").value.trim();
     let email = document.getElementById("customerEmail").value.trim();
     let aadharFile = document.getElementById("customerAadhar").files.length;
     let messageElement = document.getElementById("customerMessage");
-
-    // Reset message color to default
-    messageElement.style.color = "red";
 
     // Validate Name
     if (name === "") {
@@ -31,7 +29,7 @@ function displayMessage() {
         return;
     }
 
-    // Validate Email with a proper regex
+    // Validate Email
     let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(email)) {
         messageElement.textContent = "❌ Please enter a valid email address.";
@@ -61,4 +59,4 @@ function displayMessage() {
     let personalizedMessage = messages[firstLetter] || "Welcome to Cosmic Resort!";
     messageElement.textContent = `✅ Hello ${name}, ${personalizedMessage}`;
     messageElement.style.color = "green";
-}
+} my js code modify in it
