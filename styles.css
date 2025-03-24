@@ -32,44 +32,64 @@ body {
 }
 
 /* Customer Details Section */
+
+  /* Customer Details Section */
 #customer-section {
     text-align: center;
     padding: 20px;
+    background: white;
+    max-width: 400px; /* Ensuring it stays neat */
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-#customer-section input, #customer-section select {
-    padding: 8px;
-    width: 250px;
+#customer-section h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#customer-section input,
+#customer-section select {
+    width: 100%; /* Ensuring full width */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px;
-    display: block;
-    margin: 10px auto;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
 #customer-section button {
-    padding: 10px 20px;
+    width: 100%;
+    padding: 12px;
     background-color: #00796b;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: 0.3s;
 }
 
-#customerMessage {
-    font-weight: bold;
-    margin-top: 10px;
+#customer-section button:hover {
+    background-color: #005a50;
 }
 
-/* Additional Guest Details */
+/* Guest Details */
 #additionalDetails {
     display: none;
-    background-color: #fff;
+    background: #f9f9f9;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    #customer-section {
+        width: 90%;
+    }
 }
 
 /* Resort Information */
