@@ -37,25 +37,39 @@ body {
     padding: 20px;
 }
 
-#customer-section input {
+#customer-section input, #customer-section select {
     padding: 8px;
     width: 250px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 10px auto;
 }
 
 #customer-section button {
-    padding: 8px 15px;
+    padding: 10px 20px;
     background-color: #00796b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #customerMessage {
     font-weight: bold;
     margin-top: 10px;
+}
+
+/* Additional Guest Details */
+#additionalDetails {
+    display: none;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
 /* Resort Information */
