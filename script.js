@@ -54,6 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    // Resort Details Update
+    const resortInfo = {
+        id: "CR12345",
+        phone: "xxxxxxxxxx",
+        E-mail Id : "cosmic@gamil.com" ,
+        address: "123 Cosmic Street, Galaxy City, Universe"
+    };
+    
+    document.getElementById("resort-info").innerHTML += `
+        <h3>Resort Details</h3>
+        <p><strong>Resort ID:</strong> ${resortInfo.id}</p>
+        <p><strong>Phone Number:</strong> ${resortInfo.phone}</p>
+        <p><strong>E-mail Id:</strong> ${resortInfo.E-mail Id}</p>
+        <p><strong>Address:</strong> ${resortInfo.address}</p>
+    `;
+
     // Dynamic Menu Generation
     const menuData = [
         {
@@ -93,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateMenu() {
         const menuList = document.getElementById("menu-list");
+        if (!menuList) return;
         menuList.innerHTML = "";
 
         menuData.forEach(category => {
