@@ -35,13 +35,19 @@ body {
 #customer-section {
     text-align: center;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 10px;
 }
 
 #customer-section input {
     padding: 8px;
-    width: 250px;
+    width: 80%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 #customer-section button {
@@ -51,6 +57,36 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#customerMessage {
+    font-weight: bold;
+    color: #00796b;
+    margin-top: 10px;
+}
+
+/* Resort Information Section */
+#resort-info {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#resort-info h2 {
+    color: #d32f2f;
+}
+
+#resort-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resort-info ul li {
+    padding: 5px 0;
+    font-size: 16px;
 }
 
 /* Image Gallery */
@@ -72,15 +108,17 @@ body {
 }
 
 .gallery img {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Menu Section */
@@ -103,6 +141,20 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.menu-category h3 {
+    color: #d32f2f;
+}
+
+.menu-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-category ul li {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -120,4 +172,4 @@ footer {
     .menu-category {
         max-width: 90%;
     }
-} 
+}
